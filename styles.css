@@ -66,7 +66,6 @@ body {
   width: 60px;
   height: 60px;
   margin: 20px;
-  border: 2px solid white;
   border-radius: 10px;
 }
 .navLink {
@@ -119,8 +118,66 @@ body {
 
 .aboutContent {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
   position: relative;
   left: 20vw;
+}
+.aboutCardsContainer {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 25px;
+  width: 80vw;
+  height: 80vh;
+}
+.aboutImg {
+  aspect-ratio: 3 / 4;
+  height: 80%;
+  border: 2px solid gray;
+  border-radius: 25px;
+  position: relative;
+  animation: 2s floatInUp ease;
+}
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  height: calc(40% - 12.5px);
+  width: calc(40% - 50px);
+  border: 2px solid gray;
+  border-radius: 25px;
+  padding: 0px 25px;
+  position: relative;
+  animation: 2s floatInRight ease;
+ }
+@keyframes floatInUp {
+  0% {
+    top:100%;
+  }
+  100% {
+    top:0%;
+  }
+}
+@keyframes floatInRight {
+  0% {
+    left:100%;
+  }
+  100% {
+    left:0%;
+  }
+}
+.aboutCardTitle {
+  align-self: center;
+}
+.aboutCardBody {
+
+}
+.aboutCardList {
 }
 
 .experienceContent{
@@ -132,6 +189,7 @@ body {
   position: relative;
   left: 20vw;
 }
+
 .experienceCard {
   display: flex;
   flex-direction: row;
